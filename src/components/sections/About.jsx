@@ -17,7 +17,7 @@ export default function About() {
             className="w-full rounded-[1.25rem] object-cover"
             autoPlay muted loop playsInline preload="none" poster="/images/rita.jpg"
           >
-            <source src="/videos/reveal.mp4" type="video/mp4" />
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
           </video>
         </div>
 

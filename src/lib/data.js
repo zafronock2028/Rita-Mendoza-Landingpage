@@ -2,19 +2,74 @@ export const WHATSAPP = '15595744513'
 export const waLink = (msg) =>
   `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
 
-export const products = [
-  { slug: 'signature-riman-ritual', img: '/products/signature-riman-ritual.jpg', name: 'Signature RIMAN Ritual', line: 'RIMAN', note: 'Ritual insignia completo' },
-  { slug: 'advanced-riman-ritual', img: '/products/advanced-riman-ritual.png', name: 'Advanced RIMAN Ritual', line: 'RIMAN', note: 'Corrección avanzada' },
-  { slug: 'essential-riman-ritual', img: '/products/essential-riman-ritual.jpg', name: 'Essential RIMAN Ritual', line: 'RIMAN', note: 'Rutina esencial diaria' },
-  { slug: 'icd-radiansome-100-cream', img: '/products/icd-radiansome-100-cream.png', name: 'ICD Radiansome 100 Cream', line: 'ICD', note: 'Luminosidad concentrada' },
-  { slug: 'icd-radiansome-100-toner', img: '/products/icd-radiansome-100-toner.png', name: 'ICD Radiansome 100 Toner', line: 'ICD', note: 'Prepara y equilibra' },
-  { slug: 'collagen-100-melting-mask', img: '/products/collagen-100-melting-mask.png', name: 'Collagen 100 Melting Mask', line: 'RIMAN', note: 'Colágeno que se funde' },
-  { slug: 'beauty-collagen', img: '/products/beauty-collagen.png', name: 'Beauty Collagen', line: 'RIMAN', note: 'Belleza desde dentro' },
-  { slug: 'essential-cleansing-powder-wash', img: '/products/essential-cleansing-powder-wash.png', name: 'Cleansing Powder Wash', line: 'RIMAN', note: 'Limpieza en polvo' },
-  { slug: 'essential-balancing-gel-cleanser', img: '/products/essential-balancing-gel-cleanser.png', name: 'Balancing Gel Cleanser', line: 'RIMAN', note: 'Gel equilibrante' },
-  { slug: 'icd-two-phase-oil-mist', img: '/products/icd-two-phase-oil-mist.png', name: 'ICD Two-Phase Oil Mist', line: 'ICD', note: 'Bruma bifásica' },
-  { slug: 'icd-multi-stick-balm', img: '/products/icd-multi-stick-balm.png', name: 'ICD Multi-Stick Balm', line: 'ICD', note: 'Bálsamo multiusos' },
-  { slug: 'deserticola-plus-hair-oil-serum', img: '/products/deserticola-plus-hair-oil-serum.png', name: 'Deserticola+ Hair Oil Serum', line: 'RIMAN', note: 'Sérum capilar' },
+// [validar] URL del mall RIMAN de Rita. Reemplazar por su enlace real de tienda.
+export const MALL_URL = 'https://www.riman.com'
+
+// Productos fondo blanco -> seccion destacada con descripcion + beneficios.
+export const featured = [
+  {
+    slug: 'signature-riman-ritual',
+    img: '/products/signature-riman-ritual.jpg',
+    line: 'RIMAN',
+    name: 'Signature RIMAN Ritual',
+    desc: 'El ritual insignia. Una rutina completa de día y noche que transforma la piel con la ciencia coreana más avanzada.',
+    benefits: ['Rutina completa AM/PM', 'Resultados visibles en semanas', 'Fórmula coreana premium'],
+  },
+  {
+    slug: 'advanced-riman-ritual',
+    img: '/products/advanced-riman-ritual.png',
+    line: 'RIMAN',
+    name: 'Advanced RIMAN Ritual',
+    desc: 'Corrección avanzada para pieles que buscan más. Concentrados de alto rendimiento contra los signos del tiempo.',
+    benefits: ['Antiedad intensivo', 'Firmeza y luminosidad', 'Activos concentrados'],
+  },
+  {
+    slug: 'essential-riman-ritual',
+    img: '/products/essential-riman-ritual.jpg',
+    line: 'RIMAN',
+    name: 'Essential RIMAN Ritual',
+    desc: 'Tu punto de partida. La rutina esencial que limpia, hidrata y equilibra tu piel cada día.',
+    benefits: ['Ideal para empezar', 'Limpieza + hidratación', 'Piel equilibrada a diario'],
+  },
+  {
+    slug: 'icd-cleansing-experience-kit',
+    img: '/products/icd-cleansing-experience-kit.png',
+    line: 'ICD',
+    name: 'ICD Cleansing Experience Kit',
+    desc: 'La experiencia de la doble limpieza coreana en un solo kit. Poros limpios, piel que respira.',
+    benefits: ['Doble limpieza coreana', 'Poros visiblemente limpios', 'Textura suave al instante'],
+  },
+  {
+    slug: 'essential-cleansing-powder-wash',
+    img: '/products/essential-cleansing-powder-wash.png',
+    line: 'RIMAN',
+    name: 'Essential Cleansing Powder Wash',
+    desc: 'Limpiador enzimático en polvo que exfolia con delicadeza y revela una piel fresca y luminosa.',
+    benefits: ['Enzimático suave', 'Exfolia sin agredir', 'Luminosidad inmediata'],
+  },
+  {
+    slug: 'essential-balancing-gel-cleanser',
+    img: '/products/essential-balancing-gel-cleanser.png',
+    line: 'RIMAN',
+    name: 'Essential Balancing Gel Cleanser',
+    desc: 'Gel equilibrante de uso diario que controla la grasa y respeta el pH natural de tu piel.',
+    benefits: ['Controla la grasa', 'pH balanceado', 'Uso diario'],
+  },
+]
+
+// Productos con fondo transparente -> carrusel con video de fondo.
+export const carousel = [
+  { slug: 'icd-radiansome-100-cream', img: '/products/icd-radiansome-100-cream.png', line: 'ICD', name: 'Radiansome 100 Cream', note: 'Luminosidad concentrada' },
+  { slug: 'icd-radiansome-100-toner', img: '/products/icd-radiansome-100-toner.png', line: 'ICD', name: 'Radiansome 100 Toner', note: 'Prepara y equilibra' },
+  { slug: 'collagen-100-melting-mask', img: '/products/collagen-100-melting-mask.png', line: 'RIMAN', name: 'Collagen 100 Melting Mask', note: 'Colágeno que se funde' },
+  { slug: 'beauty-collagen', img: '/products/beauty-collagen.png', line: 'RIMAN', name: 'Beauty Collagen', note: 'Belleza desde dentro' },
+  { slug: 'deep-talk-plus', img: '/products/deep-talk-plus.png', line: 'RIMAN', name: 'Deep Talk Plus', note: 'Hidratación profunda' },
+  { slug: 'icd-dermatology-cream', img: '/products/icd-dermatology-cream.png', line: 'ICD', name: 'Dermatology Cream', note: 'Calma y repara' },
+  { slug: 'icd-dermatology-first-package', img: '/products/icd-dermatology-first-package.png', line: 'ICD', name: 'Dermatology First Package', note: 'Kit dermatológico' },
+  { slug: 'icd-multi-stick-balm', img: '/products/icd-multi-stick-balm.png', line: 'ICD', name: 'Multi-Stick Balm', note: 'Bálsamo multiusos' },
+  { slug: 'icd-two-phase-oil-mist', img: '/products/icd-two-phase-oil-mist.png', line: 'ICD', name: 'Two-Phase Oil Mist', note: 'Bruma bifásica' },
+  { slug: 'deserticola-plus-hair-oil-serum', img: '/products/deserticola-plus-hair-oil-serum.png', line: 'RIMAN', name: 'Deserticola+ Hair Oil Serum', note: 'Sérum capilar' },
+  { slug: 'deserticola-plus-conditioner', img: '/products/deserticola-plus-conditioner.png', line: 'RIMAN', name: 'Deserticola+ Conditioner', note: 'Acondicionador nutritivo' },
 ]
 
 export const sponsors = [
@@ -40,4 +95,10 @@ export const steps = [
   { n: '02', t: 'Te formo', d: 'Accedes al sistema, catálogo y comunidad.' },
   { n: '03', t: 'Lanzas', d: 'Tu primer cliente en semanas, no en meses.' },
   { n: '04', t: 'Creces', d: 'Escalas ingresos y formas tu propio equipo.' },
+]
+
+export const affiliatePerks = [
+  { t: 'Asesoría directa con Rita', d: 'Hablas con Rita, no con un bot. Estrategia uno a uno para tu negocio.' },
+  { t: 'Entrenamiento personalizado', d: 'Formación adaptada a tu ritmo: producto, ventas y marca personal.' },
+  { t: 'Plan de acción semanal', d: 'Cada semana sabes exactamente qué hacer para avanzar y facturar.' },
 ]

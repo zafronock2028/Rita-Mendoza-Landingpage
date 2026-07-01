@@ -4,8 +4,9 @@ import { waLink } from '../../lib/data'
 
 const links = [
   { href: '#sobre', label: 'Sobre Rita' },
+  { href: '#riman', label: 'RIMAN' },
   { href: '#productos', label: 'Productos' },
-  { href: '#oportunidad', label: 'Oportunidad' },
+  { href: '#afiliados', label: 'Afiliados' },
   { href: '#testimonios', label: 'Testimonios' },
 ]
 

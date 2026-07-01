@@ -22,8 +22,15 @@ export default function CTA() {
   return (
     <section id="contacto" ref={root} className="relative overflow-hidden py-32 md:py-44">
       <div className="absolute inset-0 -z-10">
+        <img
+          src="/images/rita-final.jpg"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-center opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/70 to-bg" />
+        <div className="absolute inset-0 bg-bg/30" />
         <GlowField density={60} className="absolute inset-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg" />
       </div>
 
       <div className="wrap text-center">

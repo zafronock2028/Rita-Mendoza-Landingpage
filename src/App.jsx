@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -10,36 +9,41 @@ import ScrollProgress from './components/effects/ScrollProgress'
 
 import Nav from './components/sections/Nav'
 import Hero from './components/sections/Hero'
-import Sponsors from './components/sections/Sponsors'
 import About from './components/sections/About'
-import Pillars from './components/sections/Pillars'
+import Riman from './components/sections/Riman'
+import Featured from './components/sections/Featured'
 import Products from './components/sections/Products'
+import Pillars from './components/sections/Pillars'
 import Ritual from './components/sections/Ritual'
+import Affiliate from './components/sections/Affiliate'
 import Testimonios from './components/sections/Testimonios'
 import CTA from './components/sections/CTA'
+import Sponsors from './components/sections/Sponsors'
 import Footer from './components/sections/Footer'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export default function App() {
-  const [ready, setReady] = useState(false)
   useLenis()
 
   return (
     <>
-      <Preloader onDone={() => { setReady(true); ScrollTrigger.refresh() }} />
+      <Preloader onDone={() => ScrollTrigger.refresh()} />
       <CursorFollower />
       <ScrollProgress />
       <Nav />
       <main>
         <Hero />
-        <Sponsors />
         <About />
-        <Pillars />
+        <Riman />
+        <Featured />
         <Products />
+        <Pillars />
         <Ritual />
+        <Affiliate />
         <Testimonios />
         <CTA />
+        <Sponsors />
       </main>
       <Footer />
     </>

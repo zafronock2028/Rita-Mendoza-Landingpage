@@ -28,9 +28,12 @@ export default function SplitReveal({ text, as: Tag = 'h2', className = '', dela
   return (
     <Tag ref={ref} className={className}>
       {words.map((w, i) => (
-        <span key={i} className="rv-word" style={{ display: 'inline-block', overflow: 'hidden', paddingBottom: '0.08em', marginRight: '0.26em' }}>
+        <span
+          key={i}
+          className="rv-word"
+          style={{ display: 'inline-block', overflow: 'hidden', paddingBottom: '0.08em', marginRight: '0.24em' }}
+        >
           <span style={{ display: 'inline-block', willChange: 'transform' }}>{w}</span>
-          {i < words.length - 1 ? ' ' : ''}
         </span>
       ))}
     </Tag>
