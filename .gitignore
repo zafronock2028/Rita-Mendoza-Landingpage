@@ -1,0 +1,21 @@
+node_modules
+dist
+dist-ssr
+.env
+.env.*
+*.local
+.vercel
+.DS_Store
+Thumbs.db
+npm-debug.log*
+yarn-error.log*
+
+# Carpetas de origen de assets (ya copiadas a /public)
+/Foto de rita
+/LOGOS RIMAN PRODUCTOS
+/Logo Marca Personal
+/products
+/sponsors
+/testimonios
+/videos
+Programa de Afiliados riman.*

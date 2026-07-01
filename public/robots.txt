@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rita-mendoza-glow.vercel.app/sitemap.xml
