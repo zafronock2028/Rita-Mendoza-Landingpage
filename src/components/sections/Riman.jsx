@@ -53,15 +53,26 @@ export default function Riman() {
             </ScrollReveal>
           </div>
 
-          {/* brand plate */}
-          <ScrollReveal className="relative">
+          {/* brand plate with company photo */}
+          <ScrollReveal className="relative" data-cursor="hover">
             <div className="glow-brand absolute -inset-8 -z-10 blur-3xl opacity-70" />
-            <div className="flex flex-col items-center gap-10 rounded-[1.5rem] border border-line bg-bg-alt/70 p-12 backdrop-blur-sm">
-              <img src="/images/riman-logo.png" alt="RIMAN" className="h-16 w-auto object-contain md:h-20" />
-              <div className="h-px w-24 bg-line" />
-              <div className="flex flex-wrap items-center justify-center gap-8 opacity-80">
-                <img src="/sponsors/icd-skincare.png" alt="ICD Skincare" className="h-9 w-auto object-contain" />
-                <img src="/sponsors/icd-makeup.png" alt="ICD Makeup" className="h-9 w-auto object-contain" />
+            <div className="overflow-hidden rounded-[1.5rem] border border-line bg-bg-alt/70 backdrop-blur-sm">
+              <div className="relative">
+                <img
+                  src="/images/empresa-riman.png"
+                  alt="RIMAN, la empresa detrás de las fórmulas"
+                  loading="lazy"
+                  className="w-full object-cover"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent" />
+              </div>
+              <div className="flex flex-col items-center gap-6 p-8">
+                <img src="/images/riman-logo.png" alt="RIMAN" className="h-12 w-auto object-contain md:h-14" />
+                <div className="h-px w-24 bg-line" />
+                <div className="flex flex-wrap items-center justify-center gap-8 opacity-80">
+                  <img src="/sponsors/icd-skincare.png" alt="ICD Skincare" className="h-8 w-auto object-contain" />
+                  <img src="/sponsors/icd-makeup.png" alt="ICD Makeup" className="h-8 w-auto object-contain" />
+                </div>
               </div>
             </div>
           </ScrollReveal>

@@ -47,14 +47,21 @@ export default function Testimonios() {
             <figure
               key={i}
               data-cursor="hover"
-              className="w-[68vw] shrink-0 overflow-hidden rounded-xl border border-line bg-bg-alt sm:w-[42vw] md:w-[22rem]"
+              className="flex w-[74vw] shrink-0 flex-col overflow-hidden rounded-xl border border-line bg-bg-alt sm:w-[46vw] md:w-[23rem]"
             >
               <img
                 src={t.img}
-                alt={`Testimonio ${t.id} de la comunidad Rita Mendoza Glow`}
+                alt={`Resultado de ${t.name} con productos RIMAN & ICD`}
                 loading="lazy"
                 className="w-full"
               />
+              <figcaption className="flex flex-1 flex-col gap-3 p-5">
+                <p className="text-sm leading-relaxed text-ink">“{t.quote}”</p>
+                <div className="mt-auto flex items-center justify-between gap-3 border-t border-line pt-3">
+                  <span className="font-display text-base text-ink">{t.name}</span>
+                  <span className="text-[0.65rem] tracking-wide text-brand" style={{ fontFamily: 'Space Mono, monospace' }}>{t.meta}</span>
+                </div>
+              </figcaption>
             </figure>
           ))}
         </div>

@@ -8,16 +8,16 @@ export default function Affiliate() {
     <section id="afiliados" className="relative overflow-hidden py-28 md:py-36">
       <div className="absolute inset-0 -z-10">
         <video
-          className="h-full w-full object-cover opacity-20"
+          className="h-full w-full object-cover opacity-15"
           autoPlay muted loop playsInline preload="none" poster="/images/rita-final.jpg"
         >
-          <source src="/videos/reveal.mp4" type="video/mp4" />
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/90 to-bg" />
       </div>
 
       <div className="wrap">
-        <div className="grid gap-14 md:grid-cols-[1fr_1fr] md:items-center md:gap-20">
+        <div className="grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-16">
           <div>
             <p className="eyebrow mb-6">Programa de afiliados RIMAN</p>
             <SplitReveal
@@ -48,18 +48,31 @@ export default function Affiliate() {
             </div>
           </div>
 
-          <ScrollReveal className="flex flex-col gap-4" stagger>
-            {affiliatePerks.map((p, i) => (
-              <div key={p.t} className="group flex gap-5 rounded-2xl border border-line bg-bg-alt/70 p-6 backdrop-blur-sm transition-colors hover:border-brand/40">
-                <span className="font-display text-3xl text-brand">{String(i + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3 className="font-display text-xl">{p.t}</h3>
-                  <p className="mt-1.5 text-sm text-muted">{p.d}</p>
-                </div>
-              </div>
-            ))}
+          {/* foto programa de afiliados */}
+          <ScrollReveal className="relative" data-cursor="hover">
+            <div className="glow-brand absolute -inset-8 -z-10 blur-3xl opacity-60" />
+            <div className="overflow-hidden rounded-[1.5rem] border border-line">
+              <img
+                src="/images/afiliados-foto.jpg"
+                alt="Programa de afiliados RIMAN con Rita Mendoza"
+                loading="lazy"
+                className="w-full object-cover"
+              />
+            </div>
           </ScrollReveal>
         </div>
+
+        <ScrollReveal className="mt-16 grid gap-4 md:grid-cols-3" stagger>
+          {affiliatePerks.map((p, i) => (
+            <div key={p.t} className="group flex gap-5 rounded-2xl border border-line bg-bg-alt/70 p-6 backdrop-blur-sm transition-colors hover:border-brand/40">
+              <span className="font-display text-3xl text-brand">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3 className="font-display text-xl">{p.t}</h3>
+                <p className="mt-1.5 text-sm text-muted">{p.d}</p>
+              </div>
+            </div>
+          ))}
+        </ScrollReveal>
       </div>
     </section>
   )

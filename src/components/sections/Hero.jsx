@@ -29,23 +29,25 @@ export default function Hero() {
 
   return (
     <section id="top" ref={root} className="relative flex min-h-[100svh] items-center justify-center overflow-hidden text-center">
-      {/* background: biography video + glow */}
+      {/* background: main video + strong contrast so the logo pops */}
       <div className="absolute inset-0 -z-10">
         <video
-          className="hero-video h-full w-full object-cover opacity-45"
+          className="hero-video h-full w-full object-cover opacity-35"
           autoPlay muted loop playsInline preload="metadata" poster="/images/rita-final.jpg"
         >
-          <source src="/videos/reveal.mp4" type="video/mp4" />
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-bg/80 via-bg/55 to-bg" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/70 to-bg" />
+        {/* darker vignette centered to lift the rose-gold logo */}
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(60% 55% at 50% 40%, rgba(6,4,3,0.72), transparent 75%)' }} />
         <GlowField className="absolute inset-0" />
       </div>
 
       <div className="wrap flex w-full flex-col items-center pt-24">
         <img
-          src="/images/logo-white.png"
+          src="/images/logo-original.png"
           alt="Rita Mendoza Glow"
-          className="hero-logo w-[78vw] max-w-2xl drop-shadow-[0_10px_40px_rgba(198,137,122,0.35)]"
+          className="hero-logo w-[78vw] max-w-2xl drop-shadow-[0_14px_50px_rgba(198,137,122,0.5)]"
           width="1024" height="1024"
         />
 

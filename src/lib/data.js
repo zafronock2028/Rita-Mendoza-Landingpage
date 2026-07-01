@@ -79,10 +79,17 @@ export const sponsors = [
   { img: '/sponsors/riman-distribuidor.png', name: 'Distribuidor Independiente' },
 ]
 
-export const testimonios = Array.from({ length: 9 }, (_, i) => ({
-  img: `/testimonios/Testimonio-${i + 1}.png`,
-  id: i + 1,
-}))
+export const testimonios = [
+  { id: 1, name: 'Carla M.', meta: '30 días · Radiansome 100', quote: 'Gracias a Rita llevo 30 días con el Radiansome y mi piel nunca se vio tan luminosa. Ya no uso base.' },
+  { id: 2, name: 'David R.', meta: '45 días · Rutina ICD', quote: 'Nunca me cuidé la piel. Rita me armó una rutina simple y en mes y medio se me nota menos cansado.' },
+  { id: 3, name: 'Lucía F.', meta: '60 días · Collagen 100', quote: 'La mascarilla de colágeno es adictiva. A los dos meses mis amigas me preguntan qué me hice.' },
+  { id: 4, name: 'Andrea P.', meta: '3 meses · Signature Ritual', quote: 'Empecé como clienta y terminé emprendiendo con Rita. El ritual me cambió la piel y el bolsillo.' },
+  { id: 5, name: 'Sofía G.', meta: '30 días · Powder Wash', quote: 'El limpiador en polvo dejó mi piel sin ese brillo graso. En un mes cambió mi textura por completo.' },
+  { id: 6, name: 'Marisol T.', meta: '90 días · Beauty Collagen', quote: 'Tomo el Beauty Collagen desde hace 3 meses. Uñas más fuertes, pelo con brillo y piel firme.' },
+  { id: 7, name: 'Paola V.', meta: '40 días · Dermatology Cream', quote: 'Tenía la piel reactiva. La crema dermatológica ICD me calmó los rojos que arrastraba hace años.' },
+  { id: 8, name: 'Jenny C.', meta: '2 meses · Mentoría Rita', quote: 'No solo vendo producto: Rita me enseñó a hacerlo. Mi primer mes ya generé ingresos reales.' },
+  { id: 9, name: 'Rosa A.', meta: '30 días · Two-Phase Oil', quote: 'El aceite bifásico es mi ritual de noche. Amanezco con la piel jugosa. Cero arrepentimiento.' },
+].map((t) => ({ ...t, img: `/testimonios/Testimonio-${t.id}.png` }))
 
 export const pillars = [
   { n: '01', k: 'Mentoría', t: 'Te enseño el sistema', d: 'No vendes sola. Recibes el método probado, formación en vivo y acompañamiento para arrancar tu negocio desde el día uno.' },

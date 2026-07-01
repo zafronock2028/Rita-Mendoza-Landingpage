@@ -12,6 +12,7 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Riman from './components/sections/Riman'
 import Featured from './components/sections/Featured'
+import FeaturedVideo from './components/sections/FeaturedVideo'
 import Products from './components/sections/Products'
 import Pillars from './components/sections/Pillars'
 import Ritual from './components/sections/Ritual'
@@ -37,6 +38,7 @@ export default function App() {
         <About />
         <Riman />
         <Featured />
+        <FeaturedVideo />
         <Products />
         <Pillars />
         <Ritual />
