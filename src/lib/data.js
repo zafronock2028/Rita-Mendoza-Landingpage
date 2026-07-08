@@ -2,8 +2,9 @@ export const WHATSAPP = '15595744513'
 export const waLink = (msg) =>
   `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
 
-// [validar] URL del mall RIMAN de Rita. Reemplazar por su enlace real de tienda.
-export const MALL_URL = 'https://www.riman.com'
+// Enlaces oficiales RIMAN de Rita Glow.
+export const MALL_URL = 'https://mall.riman.com/ritaglow'
+export const REGISTER_URL = 'https://join.riman.com/country-language?siteurl=ritaglow'
 
 // Productos fondo blanco -> seccion destacada con descripcion + beneficios.
 export const featured = [

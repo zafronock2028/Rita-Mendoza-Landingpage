@@ -1,7 +1,7 @@
 import SplitReveal from '../effects/SplitReveal'
 import ScrollReveal from '../effects/ScrollReveal'
 import MagneticButton from '../effects/MagneticButton'
-import { waLink, affiliatePerks } from '../../lib/data'
+import { waLink, affiliatePerks, REGISTER_URL } from '../../lib/data'
 
 export default function Affiliate() {
   return (
@@ -32,7 +32,7 @@ export default function Affiliate() {
 
             <div className="mt-9 flex flex-wrap gap-4">
               <MagneticButton
-                href={waLink('Hola Rita, quiero registrarme en el programa de afiliados RIMAN.')}
+                href={REGISTER_URL}
                 target="_blank" rel="noopener noreferrer"
                 className="rounded-full bg-brand px-7 py-3.5 font-medium text-bg transition-colors hover:bg-brand-accent"
               >

@@ -23,13 +23,13 @@ export default function CTA() {
     <section id="contacto" ref={root} className="relative overflow-hidden py-32 md:py-44">
       <div className="absolute inset-0 -z-10">
         <img
-          src="/images/rita-final.jpg"
+          src="/images/rita-cta-final.jpg"
           alt=""
           aria-hidden="true"
-          className="h-full w-full object-cover object-center opacity-40"
+          className="h-full w-full object-cover object-center opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg via-bg/70 to-bg" />
-        <div className="absolute inset-0 bg-bg/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/45 to-bg" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg/60 via-transparent to-bg/60" />
         <GlowField density={60} className="absolute inset-0" />
       </div>
 
