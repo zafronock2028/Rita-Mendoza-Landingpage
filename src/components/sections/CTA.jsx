@@ -26,10 +26,10 @@ export default function CTA() {
           src="/images/rita-cta-final.jpg"
           alt=""
           aria-hidden="true"
-          className="h-full w-full object-cover object-center opacity-80"
+          className="h-full w-full object-cover object-center opacity-55"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/45 to-bg" />
-        <div className="absolute inset-0 bg-gradient-to-r from-bg/60 via-transparent to-bg/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/90 via-bg/70 to-bg" />
+        <div className="absolute inset-0 bg-bg/45" />
         <GlowField density={60} className="absolute inset-0" />
       </div>
 

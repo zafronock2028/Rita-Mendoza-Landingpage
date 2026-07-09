@@ -14,6 +14,7 @@ import Riman from './components/sections/Riman'
 import Featured from './components/sections/Featured'
 import FeaturedVideo from './components/sections/FeaturedVideo'
 import Products from './components/sections/Products'
+import StarProducts from './components/sections/StarProducts'
 import Pillars from './components/sections/Pillars'
 import Ritual from './components/sections/Ritual'
 import Affiliate from './components/sections/Affiliate'
@@ -40,6 +41,7 @@ export default function App() {
         <Featured />
         <FeaturedVideo />
         <Products />
+        <StarProducts />
         <Pillars />
         <Ritual />
         <Affiliate />
