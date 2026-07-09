@@ -6,6 +6,7 @@ import { useLenis } from './lib/useLenis'
 import Preloader from './components/effects/Preloader'
 import CursorFollower from './components/effects/CursorFollower'
 import ScrollProgress from './components/effects/ScrollProgress'
+import BgMusic from './components/effects/BgMusic'
 
 import Nav from './components/sections/Nav'
 import Hero from './components/sections/Hero'
@@ -33,6 +34,7 @@ export default function App() {
       <Preloader onDone={() => ScrollTrigger.refresh()} />
       <CursorFollower />
       <ScrollProgress />
+      <BgMusic />
       <Nav />
       <main>
         <Hero />
